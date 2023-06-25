@@ -1,9 +1,10 @@
 #elem {
-	box-sizing: border-box;
-	padding: 20px;
-	width: 200px;
-	height: 200px;
+	width: 300px;
+	height: 150px;
 	margin: 50px auto;
+	padding: 25px;
 	background: #CFF5BF;
-	border: 20px solid #F0D7A1;
+	border: 25px solid #F0D7A1;
+	overflow: auto;
+	text-align: justify;
 }
