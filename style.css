@@ -1,5 +1,6 @@
-#elem {
-	width: 100px;
+div.active {
 	color: red;
-	font-size: 20px;
+}
+div:not(active) {
+	color: black;
 }
