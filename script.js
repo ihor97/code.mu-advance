@@ -1,13 +1,19 @@
 /*
-Распахнем элемент на всю высоту:
+Ширина полосы прокрутки зависит от браузера.
+ Мы можем получить значение этой ширины. 
+Для этого создадим элемент с прокруткой, но без границ и внутренних отступов:
 
 
 
 
 
 */
-let elem = document.querySelector('#elem');
-elem.style.height = elem.scrollHeight 
-	+ 'px'; 
-    elem.style.width = elem.scrollWidth 
-	+ 'px';
+let div = document.createElement('div');
+div.style.overflowY = 'scroll';
+div.style.width = '50px';
+div.style.height = '50px';
+document.body.append(div);
+
+let scrollWidth = div.offsetWidth 
+	- div.clientWidth;
+console.log(scrollWidth);
