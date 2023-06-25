@@ -1,24 +1,12 @@
 /*
-При указании значений свойств через атрибут style мы должны
- указывать единицы измерения:
-
- При необходимости мы можем избавиться 
- от единиц измерения с помощью parseInt:
-
- Если предполагаются дробные значения, 
- можно воспользоваться функцией parseFloat:
+Представим себе, что мы хотим увеличить ширину 
+на некоторое значение. Для этого нам сначала нужно 
+прочитать ширину, затем извлечь число, прибавить к
+ нему нужное значение,
+ добавить 'px' и только потом записать обратно:
 
 */
-elem.style.width = '100px';
-let width = elem.style.width;
-console.log(width); // выведет '100px';
-
-{
-    let width = elem.style.width;
-    console.log(parseInt(width));
-}
-
-{
-    let width = elem.style.width;
-    console.log(parseFloat(width));
-}
+let elem=document.querySelector('#elem')
+let widthPx = elem.style.width;
+let widthNm = parseInt(width);
+elem.style.width = (widthNm + 30) + 'px';
