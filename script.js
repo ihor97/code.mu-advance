@@ -1,6 +1,12 @@
 /*
-Через свойство style можно прочитать только стили, заданные через атрибут style. Это значит
-, что стили заданные в CSS файле, прочитать нельзя.
+Свойства, заданные в CSS файле, можно прочитать
+ с помощью специальной функции getComputedStyles.
+
+ В результате мы получим объект, содержащий значения CSS свойств для 
+ нашего элемента. Давайте с его помощью прочитаем, например, цвет:
+
+
 */
 let elem = document.querySelector('#elem');
-console.log(elem.style.color); // выведет ''
+let computedStyle = getComputedStyle(elem);
+console.log(computedStyle);
