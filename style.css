@@ -1,6 +1,9 @@
-div.active {
-	color: red;
+[data-type="success"] {
+	color: green;
 }
-div:not(active) {
-	color: black;
+[data-type="warning"] {
+	color: orange;
+}
+[data-type="error"] {
+	color: red;
 }
