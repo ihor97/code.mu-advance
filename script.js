@@ -1,9 +1,10 @@
 /*
-Следующие свойства содержат размеры элемента
- с учетом спрятанной под прокруткой части:
+Следующие свойства содержат то, на сколько прокручен элемент:
+
+
 
 
 */
 let elem = document.querySelector('#elem');
-console.log(elem.scrollWidth);  // ширина
-console.log(elem.scrollHeight); // высота
+console.log(elem.scrollTop);  // сверху
+console.log(elem.scrollLeft); // слева
