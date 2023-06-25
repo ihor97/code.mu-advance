@@ -1,9 +1,9 @@
-[data-type="success"] {
-	color: green;
-}
-[data-type="warning"] {
-	color: orange;
-}
-[data-type="error"] {
-	color: red;
+#elem {
+	box-sizing: border-box;
+	padding: 20px;
+	width: 200px;
+	height: 200px;
+	margin: 50px auto;
+	background: #CFF5BF;
+	border: 20px solid #F0D7A1;
 }
