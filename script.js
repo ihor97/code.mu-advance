@@ -1,15 +1,13 @@
 /*
-Давайте переберем ее циклом:
-
+Коллекции Set можно преобразовывать в массивы. Можно также выполнять обратную операцию -
+ массивы преобразовывать в Set. Давайте посмотрим, как это делается.
 
 */ 
 
-let set = new Set;
+let set = new Set([1, 2, 3]);
 
-set.add(1);
-set.add(2);
-set.add(3);
+let arr = [...set];
 
-for (let elem of set) {
-	console.log(elem);
+{
+	let arr = Array.from(set);
 }
