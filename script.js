@@ -1,27 +1,11 @@
 /*
-В свойстве size содержится размер коллекции:
-console.log(map.size);
+Чтобы получить только ключи или только значения, существуют специальные методы. Для получения значений метод values:
 
-Проверить наличие ключа в коллекции можно с помощью метода has:
-console.log(map.has(arr1));
+let values = map.values();
+Аналогично с ключами:
 
-Удалить элемент из коллекции можно с помощью метода delete:
-map.delete(arr1);
+let keys = map.keys();
+Существует также метод entries, возвращает набор пар ключ-значение:
 
-Очистить всю коллекцию можно с помощью метода clear:
-map.clear();
+let entries = map.entries();
 */ 
-let map = new Map;
-
-let arr1 = [1, 2];
-let arr2 = [3, 4];
-
-map.set(arr1, 'data1');
-map.set(arr2, 'data2');
-
-// Можно отделить ключи и значения с помощью деструктуризации:
-
-for (let [key, elem] of map) {
-	console.log(key);
-	console.log(elem);
-}
