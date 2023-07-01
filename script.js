@@ -1,16 +1,15 @@
 /*
-В свойстве size содержится размер коллекции:
-console.log(set.size);
-
-Проверить наличие значения в коллекции можно с помощью метода has:
-console.log(set.has(1));
-
-Удалить элемент из коллекции можно с помощью метода delete:
-set.delete(1);
-
-Очистить всю коллекцию можно с помощью метода clear:
-set.clear();
+Давайте переберем ее циклом:
 
 
 */ 
 
+let set = new Set;
+
+set.add(1);
+set.add(2);
+set.add(3);
+
+for (let elem of set) {
+	console.log(elem);
+}
