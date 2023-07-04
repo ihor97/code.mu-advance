@@ -1,20 +1,18 @@
 /*
-Давайте добавим в объект функцию, которая будет выполнять некоторую полезную операцию. Например, будет находить сумму элементов объекта.
+С помощью метода Symbol.for можно создавать символы с именем. Эти символы будут сохранены в глобальный реестр 
+символов и доступ к ним можно будет получить из любого места кода.
 */ 
-let obj = {a: 1, b: 2, c: 3};
+function func1() {
+	let sym = Symbol.for('test');
+	return sym;
+}
 
-let sym = Symbol();
-obj[sym] = function() {
-	console.log(this); // {a: 1, b: 2, c: 3} 
-};
-obj[sym] = function() {
-	let sum = 0;
-	
-	for (let key in this) {
-		sum += this[key];
-	}
-	
-	return sum;
-};
-let sum = obj[sym]();
-console.log(sum); // выведет 6
+function func2() {
+	let sym = Symbol.for('test');
+	return sym;
+}
+
+let sym1 = func1();
+let sym2 = func2();
+
+console.log(sym1 === sym2); // true
