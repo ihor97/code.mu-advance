@@ -1,18 +1,8 @@
 /*
-С помощью метода Symbol.for можно создавать символы с именем. Эти символы будут сохранены в глобальный реестр 
-символов и доступ к ним можно будет получить из любого места кода.
+Имея переменную с символом, можно получить его имя в глобальном реестре. Это делается с помощью метода Symbol.keyFor. 
+Давайте попробуем. Создадим символ с именем:
 */ 
-function func1() {
-	let sym = Symbol.for('test');
-	return sym;
-}
+let sym = Symbol.for('test');
 
-function func2() {
-	let sym = Symbol.for('test');
-	return sym;
-}
-
-let sym1 = func1();
-let sym2 = func2();
-
-console.log(sym1 === sym2); // true
+let key = Symbol.keyFor(sym);
+console.log(key); // выведет 'test'
